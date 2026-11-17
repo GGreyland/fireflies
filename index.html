@@ -10,20 +10,51 @@
 
     <style>
         /* Основные настройки */
+                /* 1. Изменения в body */
         body {
-            /* ВНИМАНИЕ: Фон добавлен только для демонстрации свечения. 
-               Вы можете сделать body прозрачным или убрать этот цвет */
-            background: transparent; 
+            background-color: #0d0f12; 
             color: #f0f0f0;
             font-family: 'Cormorant Garamond', serif;
             display: flex;
             justify-content: center;
-            align-items: center;
+            
+            /* МЕНЯЕМ ЭТО: flex-start прижимает всё к верху (было center) */
+            align-items: flex-start; 
+            
             min-height: 100vh;
             margin: 0;
-            padding: 20px;
+            
+            /* МЕНЯЕМ ЭТО: делаем верхний отступ страницы 0 (было 20px) */
+            padding: 0px 20px 20px 20px; 
+            
             box-sizing: border-box;
             overflow-x: hidden;
+        }
+
+        /* 2. Изменения в .wrapper */
+        .wrapper {
+            position: relative;
+            
+            /* МЕНЯЕМ ЭТО: уменьшаем верхний внутренний отступ до 10px (было 30px) */
+            padding: 10px 30px 30px 30px; 
+            
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        /* 3. Изменения в h1.title */
+        h1.title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: #fff8d6;
+            text-shadow: 0 0 10px rgba(255, 235, 150, 0.3);
+            
+            /* ДОБАВЛЯЕМ ЭТО: убираем стандартный верхний отступ у заголовка */
+            margin-top: 0; 
+            
+            margin-bottom: 30px; /* Расстояние от заголовка до таблицы */
         }
 
         /* Контейнер для эффекта звезд */
